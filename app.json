@@ -1,0 +1,85 @@
+{
+    "name": "RSS FEED BOT",
+    "description": "A bot to post messages to Telegram Groups or Channels from rss feed.",
+    "keywords": [
+        "telegram",
+        "RSS Feed",
+        "Bot"
+    ],
+    "repository": "https://github.com/viperadnan-git/rss-feed-telegram-bot",
+    "success_url": "https://github.com/magneto261290/rss-feed-telegram-bot",
+    "env": {
+        "ENV": {
+            "description": "idk",
+            "value": "ANYTHING",
+            "required": false
+        },
+        "BOT_TOKEN": {
+            "description": "Get it by creating a Telegram bot on BotFather",
+            "value": "",
+            "required": true
+        },
+        "API_ID": {
+            "description": "Get it from my.telegram.org",
+            "value": "",
+            "required": true
+        },
+        "API_HASH": {
+            "description": "Get it from my.telegram.org",
+            "value": "",
+            "required": true
+        },
+        "LOG_CHANNEL": {
+            "description": "Telegram Channel/group/user ID where the bot have to send RSS Feeds",
+            "value": "",
+            "required": true
+        },
+        "FEED_URLS": {
+            "description": "List of URLs of RSS Feed, separated by | vertical bar",
+            "value": "",
+            "required": true
+        },
+        "INTERVAL": {
+            "description": "Checking Interval in seconds.",
+            "value": "10",
+            "required": false
+        },
+        "MAX_INSTANCES": {
+            "description": "Max instances to be used while checking RSS feed.",
+            "value": "3",
+            "required": false
+        },
+        "STR_SESSION": {
+            "description": "String session generate using your tg mobile number for sending mirror cmd on your behalf.Required only if you are using string session to interact with mirror bot. Generate by running python gen_str.py in heroku console",
+            "value": "",
+            "required": false
+        },
+        "MIRROR_CHAT_ID": {
+            "description": "Group/chat_id of mirror chat or mirror bot to send mirror cmd. Required only if you are using string session to interact with mirror bot.",
+            "value": "",
+            "required": false
+        },
+        "MIRROR_CMD": {
+            "description": "if you have changed default cmd of mirror bot, replace this. Required only if you are using string session to interact with mirror bot.",
+            "value": "/mirror",
+            "required": false
+        }
+    },
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ],
+    "addons": [
+        {
+            "plan": "heroku-postgresql"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    },
+    "stack": "heroku-20"
+}
