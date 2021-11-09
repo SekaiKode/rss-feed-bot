@@ -43,7 +43,3 @@ pip3 install -r requirements.txt
 ```
 python3 rss.py
 ```
-
-## Copyright & License
-- Copyright (©) 2021 by [Adnan Ahmad](https://github.com/viperadnan-git)
-- Licensed under the terms of the [GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007](./LICENSE)
